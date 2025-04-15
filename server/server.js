@@ -6,8 +6,9 @@ import authRouter from './routes/authRouter.js'
 import userRouter from './routes/userRouter.js'
 import productRouter from './routes/productRouter.js'
 import brandRouter from './routes/brandRouter.js'
-dotenv.config();
+import { errorHandler } from './middleware/errorHandlingMiddleware.js';
 
+dotenv.config();
 connectDB()
 const app = express()
 const PORT = process.env.PORT || 5000;
@@ -17,6 +18,9 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended:true }));
 app.use(cookieParser());
+
+app.use(errorHandler)
+app.use('/uploads', express.static('public'));
 
 app.use('/api/auth',authRouter);
 app.use('/api/user',userRouter);
