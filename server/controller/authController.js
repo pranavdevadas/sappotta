@@ -1,7 +1,7 @@
 import User from "../model/User.js";
 import bcrypt from "bcryptjs";
 import { upload } from "../middleware/uploadMiddleware.js";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 import {
   generateAccessToken,
   generateRefreshToken,
@@ -113,29 +113,25 @@ export const authController = {
         throw new Error("Refresh token is required");
       }
 
-      jwt.verify(
-        oldRefreshToken,
-        process.env.JWT_SECRET,
-        (err, decoded) => {
-          if (err) {
-            res.status(403);
-            throw new Error("Invalid or expired refresh token");
-          }
-
-          const userId = decoded.id;
-
-          const newAccessToken = jwt.sign(
-            { id: userId },
-            process.env.JWT_SECRET,
-            { expiresIn: process.env.JWT_ACCESS_EXPIRY }
-          );
-
-          res.status(200).json({
-            message: "Token refreshed successfully",
-            accessToken: newAccessToken,
-          });
+      jwt.verify(oldRefreshToken, process.env.JWT_SECRET, (err, decoded) => {
+        if (err) {
+          res.status(403);
+          throw new Error("Invalid or expired refresh token");
         }
-      );
+
+        const userId = decoded.id;
+
+        const newAccessToken = jwt.sign(
+          { id: userId },
+          process.env.JWT_SECRET,
+          { expiresIn: process.env.JWT_ACCESS_EXPIRY }
+        );
+
+        res.status(200).json({
+          message: "Token refreshed successfully",
+          accessToken: newAccessToken,
+        });
+      });
     } catch (error) {
       next(error);
     }
