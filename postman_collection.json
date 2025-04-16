@@ -1,0 +1,1640 @@
+{
+	"info": {
+		"_postman_id": "23186807-c0f0-4274-acf5-fbfd17ef0e4d",
+		"name": "sapotta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33026414"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "pranav2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "pranav1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "profilePhoto",
+									"type": "file",
+									"src": "/C:/Users/Bluemoon/Downloads/4860250.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "regisster",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "pranav1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "pranav2@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "profilePhoto",
+											"type": "file",
+											"src": "/C:/Users/Bluemoon/Downloads/5622.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ad-2B0R12Dd28Yq0Uv8AikwgMze+tI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 09:46:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\",\n    \"_id\": \"67fe2ae0df7b73878951b630\",\n    \"username\": \"pranav1\",\n    \"email\": \"pranav2@gmail.com\",\n    \"profilePhoto\": \"/uploads/1744710368439-5622.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"pranav2@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"pranav2@gmail.com\",\r\n    \"password\": \"123456\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1328"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 10:19:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error</title>\n    </head>\n    <body>\n        <pre>TypeError: Cannot destructure property &#39;email&#39; of &#39;req.body&#39; as it is undefined.\n            <br> &nbsp; &nbsp;at login (file:///C:/Users/Bluemoon/Desktop/Sapotta%20Task/server/controller/authController.js:62:15)\n            <br> &nbsp; &nbsp;at Layer.handleRequest (C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\lib\\layer.js:152:17)\n            <br> &nbsp; &nbsp;at next (C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\lib\\route.js:157:13)\n            <br> &nbsp; &nbsp;at Route.dispatch (C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\lib\\route.js:117:3)\n            <br> &nbsp; &nbsp;at handle (C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\index.js:435:11)\n            <br> &nbsp; &nbsp;at Layer.handleRequest (C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\lib\\layer.js:152:17)\n            <br> &nbsp; &nbsp;at C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\index.js:295:15\n            <br> &nbsp; &nbsp;at processParams (C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\index.js:582:12)\n            <br> &nbsp; &nbsp;at next (C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\index.js:291:5)\n            <br> &nbsp; &nbsp;at Function.handle (C:\\Users\\Bluemoon\\Desktop\\Sapotta Task\\node_modules\\router\\index.js:186:3)\n        </pre>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/auth/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "refreshToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-V9rW7eXSi+fbWW1efmHlOS+A738\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 10:22:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User logged out successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "refreshtoken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/auth/refresh-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "refreshtoken",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/auth/refresh-token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"auth",
+										"refresh-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bb-BsZezwWlJtdawnoiv9hbH4oP49s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 10:47:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Token refreshed successfully\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDQ3MTQwNTksImV4cCI6MTc0NDcxNDk1OX0.8TniYARprkiClJSvECyuASsVMsMK0NIupeAGLHLLpVs\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "updateuser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMzliYTExYWM2Y2M1NTljNDljMDAiLCJpYXQiOjE3NDQ3MTU4MjIsImV4cCI6MTc0NDcxNjcyMn0.5Tn76yJl93bPwArbLEh2b_Vdz5QrrDjZwIjDAAb6Y28",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMzliYTExYWM2Y2M1NTljNDljMDAiLCJpYXQiOjE3NDQ3MTU4MjIsImV4cCI6MTc0NDcxNjcyMn0.5Tn76yJl93bPwArbLEh2b_Vdz5QrrDjZwIjDAAb6Y28\n",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"pranav5@gmail.com\",\r\n    \"username\": \"pranav5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/profile/67fe39ba11ac6cc559c49c00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"67fe39ba11ac6cc559c49c00"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateuser",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMzliYTExYWM2Y2M1NTljNDljMDAiLCJpYXQiOjE3NDQ3MTU4MjIsImV4cCI6MTc0NDcxNjcyMn0.5Tn76yJl93bPwArbLEh2b_Vdz5QrrDjZwIjDAAb6Y28\n",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"pranav5@gmail.com\",\r\n    \"username\": \"pranav5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/user/profile/67fe39ba11ac6cc559c49c00",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"user",
+										"profile",
+										"67fe39ba11ac6cc559c49c00"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "360"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"168-SPu4OrT2kH472p4+FvZQYT09vLc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 11:18:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User updated successfully\",\n    \"user\": {\n        \"_id\": \"67fe39ba11ac6cc559c49c00\",\n        \"username\": \"pranav5\",\n        \"email\": \"pranav5@gmail.com\",\n        \"password\": \"$2b$10$M5LyB4hyPlznFPdKG6VEdeju1ZpgN11xjYUIMyyCFO/wuMfeARwZq\",\n        \"profilePhoto\": \"/uploads/1744714170372-4860250.jpg\",\n        \"blockedUsers\": [],\n        \"createdAt\": \"2025-04-15T10:49:30.539Z\",\n        \"updatedAt\": \"2025-04-15T11:18:52.311Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteprofile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlMzliYTExYWM2Y2M1NTljNDljMDAiLCJpYXQiOjE3NDQ3MTYzMTgsImV4cCI6MTc0NDcxNzIxOH0.sIBI-O6nauGZkvdgCW3hjoGrSEnsTEAydy3-cF3sgl0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/profile/67fe39ba11ac6cc559c49c00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"67fe39ba11ac6cc559c49c00"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteprofile",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/user/profile/67fe39ba11ac6cc559c49c00",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"user",
+										"profile",
+										"67fe39ba11ac6cc559c49c00"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "refreshToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-AVrBlcnhiP3F9VffLe5lIkbOt6k\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 11:25:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully and logged out.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "blockuser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlNDJjMTFlZDYxMDk3NjUwYWNjOGEiLCJpYXQiOjE3NDQ3MTY1MTksImV4cCI6MTc0NDcxNzQxOX0.sOl3xoP10CHnaLC-qpi5Pv8MqQLfBBc4KVpmgTST9qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/block/67fe42da1ed61097650acc8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"block",
+								"67fe42da1ed61097650acc8e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "blockuser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/user/block/67fe42da1ed61097650acc8e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"user",
+										"block",
+										"67fe42da1ed61097650acc8e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "83"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"53-Az8SPorCt4jXc6ZLX3lu76FC+B0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 11:39:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User blocked successfully\",\n    \"blockedUsers\": [\n        \"67fe42da1ed61097650acc8e\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "unblockuser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlNDJjMTFlZDYxMDk3NjUwYWNjOGEiLCJpYXQiOjE3NDQ3MTY1MTksImV4cCI6MTc0NDcxNzQxOX0.sOl3xoP10CHnaLC-qpi5Pv8MqQLfBBc4KVpmgTST9qw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/unblock/67fe42da1ed61097650acc8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"unblock",
+								"67fe42da1ed61097650acc8e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "unblockuser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/user/unblock/67fe42da1ed61097650acc8e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"user",
+										"unblock",
+										"67fe42da1ed61097650acc8e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-yP3gHyGepchISwZFybCVg0yy8hw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 11:40:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User unblocked successfully\",\n    \"blockedUsers\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "createbrand",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlNDJjMTFlZDYxMDk3NjUwYWNjOGEiLCJpYXQiOjE3NDQ3MTk1NTcsImV4cCI6MTc0NDcyMDQ1N30.JmW_Ja4cj4IkQKpoHiM4ySrXQE9htsMnIOSa81_VfvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brandName",
+									"value": "nike",
+									"type": "text"
+								},
+								{
+									"key": "brandLogo",
+									"type": "file",
+									"src": "/C:/Users/Bluemoon/Downloads/5622.jpg"
+								},
+								{
+									"key": "categories",
+									"value": "[\"Footwear\", \"Jackets\", \"Accessories\"]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/brand/add-brand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"brand",
+								"add-brand"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create brand",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "brandName",
+											"value": "nike",
+											"type": "text"
+										},
+										{
+											"key": "brandLogo",
+											"type": "file",
+											"src": "/C:/Users/Bluemoon/Downloads/5622.jpg"
+										},
+										{
+											"key": "categories",
+											"value": "[\"Footwear\", \"Jackets\", \"Accessories\"]",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/brand/add-brand",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"brand",
+										"add-brand"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "295"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"127-/hUE8k0UbR8RAn7c1BjvujvtCsc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 12:19:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Brand created successfully\",\n    \"brand\": {\n        \"brandName\": \"nike\",\n        \"brandLogo\": \"public\\\\1744719575022-5622.jpg\",\n        \"categories\": [\n            \"[\\\"Footwear\\\", \\\"Jackets\\\", \\\"Accessories\\\"]\"\n        ],\n        \"_id\": \"67fe4ed708d47003755462d0\",\n        \"createdAt\": \"2025-04-15T12:19:35.062Z\",\n        \"updatedAt\": \"2025-04-15T12:19:35.062Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "list brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/brand/list-brands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"brand",
+								"list-brands"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list brands",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/brand/list-brands",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"brand",
+										"list-brands"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "511"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ff-D26efHjfB8hBA+uIVoJ12uvQO5s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 12:21:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"brands\": [\n        {\n            \"_id\": \"67fe4c71a37e8ac2010adc8c\",\n            \"brandName\": \"adidas\",\n            \"brandLogo\": \"public\\\\1744718961875-4860250.jpg\",\n            \"categories\": [\n                \"[\\\"Footwear\\\", \\\"Jackets\\\", \\\"Accessories\\\"]\"\n            ],\n            \"createdAt\": \"2025-04-15T12:09:21.908Z\",\n            \"updatedAt\": \"2025-04-15T12:09:21.908Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"67fe4ed708d47003755462d0\",\n            \"brandName\": \"nike\",\n            \"brandLogo\": \"public\\\\1744719575022-5622.jpg\",\n            \"categories\": [\n                \"[\\\"Footwear\\\", \\\"Jackets\\\", \\\"Accessories\\\"]\"\n            ],\n            \"createdAt\": \"2025-04-15T12:19:35.062Z\",\n            \"updatedAt\": \"2025-04-15T12:19:35.062Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "add product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlNDJjMTFlZDYxMDk3NjUwYWNjOGEiLCJpYXQiOjE3NDQ3MjIwNDIsImV4cCI6MTc0NDcyMjk0Mn0.MYHQ_gM4GsVsxDWr1fC3l5LtYMSxJHSTYVghlrpSXo0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productName",
+									"value": "Adidas Ultraboost 22",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "High-performance running shoes with energy-returning Boost technology.",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "30000",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Footware",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "67fe57cd30f974724863a66e",
+									"type": "text"
+								},
+								{
+									"key": "productImage",
+									"type": "file",
+									"src": "/C:/Users/Bluemoon/Downloads/4860250.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/add-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"add-product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productName",
+											"value": "Adidas Ultraboost 22",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "High-performance running shoes with energy-returning Boost technology.",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "30000",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "Footware",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "67fe57cd30f974724863a66e",
+											"type": "text"
+										},
+										{
+											"key": "productImage",
+											"type": "file",
+											"src": "/C:/Users/Bluemoon/Downloads/4860250.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/add-product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"add-product"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-LC0Y3GuYnBKIJLa3E98mkJsiprU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 12:59:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category does not belong to this brand\"\n}"
+						}
+					]
+				},
+				{
+					"name": "all products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlNDJjMTFlZDYxMDk3NjUwYWNjOGEiLCJpYXQiOjE3NDQ3MjI2NDksImV4cCI6MTc0NDcyMzU0OX0.kdc-FvK8qYROa8Bn0aiqgZq2Lw30WIKj3gbsOdPjtVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/product/list-products?category=Shoes&brand=67fe57cd30f974724863a66e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"list-products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Shoes"
+								},
+								{
+									"key": "brand",
+									"value": "67fe57cd30f974724863a66e"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list all products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/product/list-products?category=Shoes&brand=67fe57cd30f974724863a66e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"list-products"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Shoes"
+										},
+										{
+											"key": "brand",
+											"value": "67fe57cd30f974724863a66e"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "490"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ea-ZyLhYJUnkbZPPzS9Q5rBlaY222g\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 13:11:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"67fe589770f1c79e1ee81af8\",\n        \"productName\": \"Adidas Ultraboost 22\",\n        \"description\": \"High-performance running shoes with energy-returning Boost technology.\",\n        \"price\": 30000,\n        \"category\": [\n            \"Shoes\"\n        ],\n        \"brand\": {\n            \"_id\": \"67fe57cd30f974724863a66e\",\n            \"brandName\": \"adidas\"\n        },\n        \"productImage\": \"public\\\\1744722071196-4860250.jpg\",\n        \"addedBy\": {\n            \"_id\": \"67fe42c11ed61097650acc8a\",\n            \"username\": \"pranav2\",\n            \"email\": \"pranav1@gmail.com\"\n        },\n        \"createdAt\": \"2025-04-15T13:01:11.234Z\",\n        \"updatedAt\": \"2025-04-15T13:01:11.234Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "my products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlNDJjMTFlZDYxMDk3NjUwYWNjOGEiLCJpYXQiOjE3NDQ3MjI3OTYsImV4cCI6MTc0NDcyMzY5Nn0.ncXzZwIm8KHRkO2mv8cri4pzi-ieRX-dJDzbZ94uJ5Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/product/my-products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"my-products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "my products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/product/my-products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"my-products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "433"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b1-AmvMdMK7aN8N58kDzTr1HwQXD+A\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 13:13:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"67fe589770f1c79e1ee81af8\",\n        \"productName\": \"Adidas Ultraboost 22\",\n        \"description\": \"High-performance running shoes with energy-returning Boost technology.\",\n        \"price\": 30000,\n        \"category\": [\n            \"Shoes\"\n        ],\n        \"brand\": {\n            \"_id\": \"67fe57cd30f974724863a66e\",\n            \"brandName\": \"adidas\"\n        },\n        \"productImage\": \"public\\\\1744722071196-4860250.jpg\",\n        \"addedBy\": \"67fe42c11ed61097650acc8a\",\n        \"createdAt\": \"2025-04-15T13:01:11.234Z\",\n        \"updatedAt\": \"2025-04-15T13:01:11.234Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlNDJjMTFlZDYxMDk3NjUwYWNjOGEiLCJpYXQiOjE3NDQ3MjMzNTUsImV4cCI6MTc0NDcyNDI1NX0.84PwO7YX0Gdllks4oYnf1esBMXKs05xKapTvMHDZk1w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"adidas shoe\",\r\n    \"description\": \"its a cool shoe\",\r\n    \"price\": 40000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/update/67fe589770f1c79e1ee81af8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"update",
+								"67fe589770f1c79e1ee81af8"
+							],
+							"query": [
+								{
+									"key": "productName",
+									"value": "adidas shoe",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "its a cool shoe",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "40000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\": \"adidas shoe\",\r\n    \"description\": \"its a cool shoe\",\r\n    \"price\": 40000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/update/67fe589770f1c79e1ee81af8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"update",
+										"67fe589770f1c79e1ee81af8"
+									],
+									"query": [
+										{
+											"key": "productName",
+											"value": "adidas shoe",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "its a cool shoe",
+											"disabled": true
+										},
+										{
+											"key": "price",
+											"value": "40000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "391"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"187-KZHSMX/YOcfbriRl6+FSZApEMQs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 13:23:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product updated successfully\",\n    \"product\": {\n        \"_id\": \"67fe589770f1c79e1ee81af8\",\n        \"productName\": \"adidas shoe\",\n        \"description\": \"its a cool shoe\",\n        \"price\": 40000,\n        \"category\": [\n            \"Shoes\"\n        ],\n        \"brand\": \"67fe57cd30f974724863a66e\",\n        \"productImage\": \"public\\\\1744722071196-4860250.jpg\",\n        \"addedBy\": \"67fe42c11ed61097650acc8a\",\n        \"createdAt\": \"2025-04-15T13:01:11.234Z\",\n        \"updatedAt\": \"2025-04-15T13:23:05.477Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2ZlNDJjMTFlZDYxMDk3NjUwYWNjOGEiLCJpYXQiOjE3NDQ3MjM2ODUsImV4cCI6MTc0NDcyNDU4NX0.D6IbTkkse5A4pAZh42Kr10Q8DENgAYoVQRA4Ob8kMpg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/product/delete/67fe589770f1c79e1ee81af8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"delete",
+								"67fe589770f1c79e1ee81af8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete product err",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/product/delete/67fe589770f1c79e1ee81af8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"delete",
+										"67fe589770f1c79e1ee81af8"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-OKFaJYZLk9Vw7Mn+6fXtn/5t+Ak\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 13:27:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Access denied. No token provided.\"\n}"
+						},
+						{
+							"name": "deleteproduct",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/product/delete/67fe589770f1c79e1ee81af8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"delete",
+										"67fe589770f1c79e1ee81af8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-a+2htZNpkCDaj0ausIFBiheaYZ4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Apr 2025 13:28:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
